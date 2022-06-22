@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>Assesment</title>
+</head>
+
+<body style="background-color:#590696">
+
+  <h1 style="color:white">Sample Site</h1>
+
+  <div class="container3">
+    <div class="icon">
+      <input height="80px" type="image" src="image/shopping-cart.png" name="saveForm" onclick="cart()" id="saveForm" />
+      <!-- <p id="span"></p> -->
+
+    </div>
+    <div class="add_to_cart" id="atc"> <img src="" alt="" width="100%">  </div>
+
+  </div>
+
+  <div class="container">
+    <div class="image fade">
+      <img src="https://www.apple.com/v/macbook-pro-13/m/images/overview/hero_endframe__bsza6x4fldiq_large_2x.jpg" alt="" width="100%">
+    </div>
+  </div>
+
+
+<i id="prev" onclick="show_image(-1)" class="fas fa-chevron-left"></i>
+<i id="next" onclick="show_image(1)" class="fas fa-chevron-right"></i>
+
+<div class="dots">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+
+</div>
+
+
+
+  <script src="index.js" charset="utf-8"></script>
+
+
+  <section class="container2">
+    <div class="card">
+      <div class="card-image car-1">  </div>
+      <h2> Iphone X</h2>
+      <p>₱10,000</p>
+      <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone1()">Add to Cart</button>
+
+
+    </div>
+
+    <div class="card">
+      <div class="card-image car-2">  </div>
+      <h2> Iphone 12</h2>
+      <p>₱15,000</p>
+    <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone2()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <div class="card-image car-3">  </div>
+      <h2> Iphone 13</h2>
+      <p>₱20,000</p>
+    <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone3()">Add to Cart</button>
+    </div>
+
+  </section>
+
+
+  <section class="container2">
+    <div class="card">
+      <div class="card-image car-4">  </div>
+      <h2> Iphone 5</h2>
+      <p>₱1000</p>
+      <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone4()">Add to Cart</button>
+
+
+    </div>
+
+    <div class="card">
+      <div class="card-image car-5">  </div>
+      <h2> Iphone6</h2>
+      <p>₱2000</p>
+    <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone5()">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <div class="card-image car-6">  </div>
+      <h2> Iphone 7</h2>
+      <p>₱3000</p>
+    <button type="button" button style="background-color:#FFF2F2" name="button" id="btn" onclick="phone6()">Add to Cart</button>
+    </div>
+
+  </section>
+
+</body>
+<script type="text/javascript">
+var Sitems = new Array(); // List of items in string
+var Pitems = new Array(); // Price of items
+
+var btn=document.getElementById('btn');
+var spn=document.getElementById('span');
+let count=0;
+
+function cart(){
+  var sum = Pitems.reduce(function(a, b){
+          return a + b;
+      }, 0);
+
+  alert("Cart:\n" + Sitems.join("\n") + "\n\nTotal: ₱ " + sum);
+
+}
+
+function phone1(){ // iphone x
+  alert("Iphone X added to cart!");
+  Sitems.push("Iphone X = ₱ 10,000") + "\n";
+  Pitems.push(10000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+function phone2(){ // iphone 12
+  alert("Iphone 12 added to cart!");
+  Sitems.push("Iphone 12 = ₱ 15,000") + "\n";
+  Pitems.push(15000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+function phone3(){ // iphone 13
+  alert("Iphone 13 added to cart!");
+  Sitems.push("Iphone 13 = ₱ 20,000") + "\n";
+  Pitems.push(20000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+function phone4(){ // iphone 5
+  alert("Iphone 5 added to cart!");
+  Sitems.push("Iphone 5 = ₱ 1000") + "\n";
+  Pitems.push(1000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+function phone5(){ // iphone 6
+  alert("Iphone 6 added to cart!");
+  Sitems.push("Iphone 6 = ₱ 2000") + "\n";
+  Pitems.push(2000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+function phone6(){ // iphone 7
+  alert("Iphone 7 added to cart!");
+  Sitems.push("Iphone 7 = ₱ 3000") + "\n";
+  Pitems.push(3000);
+  count+=1;
+  document.getElementById('span').innerHTML=count;
+  console.log(count);
+}
+
+</script>
+
+</html>
